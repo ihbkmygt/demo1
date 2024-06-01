@@ -1,35 +1,32 @@
 <%- include("templates/header") %>
 <style>
     /* Custom CSS for the box */
-    .custom-box {
-        border: 2px solid #ccc; /* Add border */
-        padding: 20px; /* Add padding */
-        margin-top: 50px; /* Adjust margin for centering vertically */
+    .custom-group-img-box {
+        width: 100vw;
+        filter: brightness(50%);
+        text-align: center;
+    }
+    .img-center-overlay{
+        position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+text-decoration: underline;
+text-decoration-color: white;
+font-size: 50pt;
+height: 10vh
     }
 </style>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6 custom-box"> <!-- Add custom-box class -->
-            <% if (name) { %>
-                <h1>Hello, <%= name %>!</h1>
-                <form action="/logout" method="get">
-                    <button type="submit" class="btn btn-primary">Log Out</button>
-                </form>
-                <% if (type === 'admin') { %>
-                    <form action="/admin" method="get">
-                        <button type="submit" class="btn btn-primary">Admin</button>
-                    </form>
-                <% } %>
-            <% } else { %>
-                <h1>Welcome!</h1>
-                <form action="/login" method="get">
-                    <button type="submit" class="btn btn-primary">Log In</button>
-                </form>
-                <form action="/signup" method="get">
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                </form>
-            <% } %>
-        </div>
-    </div>
+
+<img src="cropped-Group-Picture-with-Car.jpg" class="custom-group-img-box" alt="Placeholder image" />
+<div class="img-center-overlay">
+  BCIT BAJA
 </div>
+<iframe width="100%" height="1000" src="TYP_1080p.mp4"  allowfullscreen></iframe>
+<div class="container">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+</div>
+
+
 <%- include("templates/footer") %>

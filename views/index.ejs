@@ -1,0 +1,35 @@
+<%- include("templates/header") %>
+<style>
+    /* Custom CSS for the box */
+    .custom-box {
+        border: 2px solid #ccc; /* Add border */
+        padding: 20px; /* Add padding */
+        margin-top: 50px; /* Adjust margin for centering vertically */
+    }
+</style>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 custom-box"> <!-- Add custom-box class -->
+            <% if (name) { %>
+                <h1>Hello, <%= name %>!</h1>
+                <form action="/logout" method="get">
+                    <button type="submit" class="btn btn-primary">Log Out</button>
+                </form>
+                <% if (type === 'admin') { %>
+                    <form action="/admin" method="get">
+                        <button type="submit" class="btn btn-primary">Admin</button>
+                    </form>
+                <% } %>
+            <% } else { %>
+                <h1>Welcome!</h1>
+                <form action="/login" method="get">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                </form>
+                <form action="/signup" method="get">
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%- include("templates/footer") %>

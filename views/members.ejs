@@ -1,0 +1,24 @@
+<%- include("templates/header") %> 
+<h1>Welcom, <%- include('templates/user', {user: name})  %></h1>
+<a href="/">home</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="1.png"  alt="2.png" width="304" height="236">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="image-container">
+      <img src="2.png" alt="2.png" width="304" height="236">
+    </div>
+    </div>
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="3.png"  alt="2.png" width="304" height="236">
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("templates/footer") %> 

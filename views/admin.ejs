@@ -1,0 +1,18 @@
+<%- include("templates/header") %> 
+    <div><h1>Users: </h1></div>
+    <ul>
+        <% for(let i=0; i < users.length; i++) { %>
+            <l1><h3><%- include('templates/user', {user: users[i]})  %></h3></l1>
+        
+            Type: <%= users[i].type %> <!-- Displaying the type of each user -->
+            <form action="/makeAdmin" method="post">
+                <input type="hidden" name="email" value="<%= users[i].email %>">
+                <button type="submit" class="btn btn-success">Make Admin</button>
+            </form>
+            <form action="/makeUser" method="post">
+                <input type="hidden" name="email" value="<%= users[i].email %>">
+                <button type="submit" class="btn btn-danger" >Make User</button>
+            </form>
+        <% } %>
+    </ul>
+<%- include("templates/footer") %>

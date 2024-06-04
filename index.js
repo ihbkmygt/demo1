@@ -48,9 +48,14 @@ app.get('/', (req, res) => {
 
    res.render('index');
 
- 
-  
+});
 
+app.get('/ourTeam', (req, res) => {
+	res.render('ourTeam');
+});
+
+app.get('/contact', (req, res) => {
+	res.render('contact');
 });
 
 app.get("*", (req,res) => {
